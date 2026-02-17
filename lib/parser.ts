@@ -14,8 +14,7 @@ export interface Project {
   path: string;
 }
 
-const WORKSPACE_PATH = '/Users/gustavo/.openclaw/workspace';
-const PROJECTS_PATH = path.join(WORKSPACE_PATH, 'memory/projects');
+const PROJECTS_PATH = path.join(process.cwd(), 'data/projects');
 
 export async function getProjects(): Promise<Project[]> {
   try {
